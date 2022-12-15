@@ -10,4 +10,19 @@ const BodyModel = styled.div`
     background-color: transparent;
 `
 
-export { BodyModel };
+const TreeContainer = styled.div`
+    position: absolute;
+    top: 100px;
+    left: 500px;
+`
+const FormikContainer = styled.div`
+    position: absolute;
+    align: center;
+    top: 100px;
+    left: 100px;
+`
+const ContentContainer = styled.div`
+    position: absolute;
+    right: 0;
+`
+export { BodyModel, TreeContainer, FormikContainer, ContentContainer };

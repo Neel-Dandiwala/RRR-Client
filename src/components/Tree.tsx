@@ -49,7 +49,7 @@ export const Tree: React.FC = () => {
             setRenderer(renderer);
 
             const scale = scH * 0.08 + 4;
-            const camera = new THREE.OrthographicCamera(-scale, scale, scale, -scale / 2, 0.01, 50000);
+            const camera = new THREE.OrthographicCamera(-scale, scale, scale, -scale / 2, 0.01, 1000);
             camera.position.copy(initialCameraPosition);
             camera.lookAt(target);
             setCamera(camera);
@@ -81,7 +81,7 @@ export const Tree: React.FC = () => {
                     const pos = initialCameraPosition;
                     const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
 
-                    camera.position.y = 10;
+                    camera.position.y = 100;
                     camera.position.x = pos.x * Math.cos(rotSpeed) + pos.z * Math.sin(rotSpeed);
                     camera.position.z = pos.z * Math.cos(rotSpeed) - pos.x * Math.sin(rotSpeed);
                     camera.lookAt(target); 
