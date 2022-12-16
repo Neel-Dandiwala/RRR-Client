@@ -13,8 +13,8 @@ import {
 
 export default function SignUpUser() {
     return (
-        <Flex bg="gray.100" align="center" justify="center" >
-            <Box bg="white" p={6} rounded="md" w={64}>
+        <Flex bg="rgba(0,0,0,0)" align="center" justify="center" >
+            <Box bg="rgba(255,255,255,0.1)" p={6} rounded="md" w={64}>
                 <Formik
                     initialValues={{
                         username: "",
@@ -30,8 +30,9 @@ export default function SignUpUser() {
                         <form onSubmit={handleSubmit}>
                             <VStack spacing={4} align="flex-start">
                             <FormControl>
-                                    <FormLabel htmlFor="username">Username</FormLabel>
+                                    <FormLabel color="rgba(255,255,255,1.0)" htmlFor="username">Username</FormLabel>
                                     <Field
+                                        bg="gray.200"
                                         as={Input}
                                         id="username"
                                         name="username"
@@ -49,8 +50,9 @@ export default function SignUpUser() {
                                     />
                                 </FormControl>
                                 <FormControl>
-                                    <FormLabel htmlFor="email">Email Address</FormLabel>
+                                    <FormLabel color="rgba(255,255,255,1.0)" htmlFor="email">Email Address</FormLabel>
                                     <Field
+                                        bg="gray.200"
                                         as={Input}
                                         id="email"
                                         name="email"
@@ -59,8 +61,9 @@ export default function SignUpUser() {
                                     />
                                 </FormControl>
                                 <FormControl isInvalid={!!errors.password && touched.password}>
-                                    <FormLabel htmlFor="password">Password</FormLabel>
+                                    <FormLabel color="rgba(255,255,255,1.0)" htmlFor="password">Password</FormLabel>
                                     <Field
+                                        bg="gray.200"
                                         as={Input}
                                         id="password"
                                         name="password"
